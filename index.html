@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dttb</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            padding: 100px;
+            background-color: black;
+        }
+        .tb{
+            border-collapse:collapse;
+            border:1px solid #ddd;
+            text-align: center;
+            width: 80%;
+            background-color:grey;
+            color:#ddd;
+        }
+        .tb td,.tb th{
+            padding: 5px 0;
+            border:1px solid #ddd;
+        }
+        .tb > thead{
+            background-color: indianred;
+        }
+        .tb > thead > tr{
+
+        }
+        .tb > thead > tr > th{
+
+        }
+        .tb > tbody{
+
+        }
+        .tb > tbody > tr{
+
+        }
+        .tb > tbody > tr:nth-child(2n+1){
+            background-color: black;
+        }
+        .tb > tbody > tr > td{
+
+        }
+        .tb > tfoot{
+            background-color:brown;
+        }
+        .tb > tfoot > tr{
+
+        }
+        .tb > tfoot > tr > td{
+
+        }
+    </style>
+    <script src="dttb.js"></script>
+</head>
+<body>
+<div id="wrapper"></div>
+<script>
+    var data = [
+        {
+            id:1,
+            name:"东方不败",
+            sex:"男",
+            age:24,
+            mobile:"15123654789",
+            birth:"1975-11-04"
+        },
+        {
+            id:2,
+            name:"技术总监芊芊",
+            sex:"女",
+            age:34,
+            mobile:"15123662734",
+            birth:"1982-03-14"
+        },
+        {
+            id:3,
+            name:"吸毒欧阳锋",
+            sex:"男",
+            age:21,
+            mobile:"15937462521",
+            birth:"1988-11-27"
+        }
+    ];
+    var table = new dttb({
+
+    });
+</script>
+</body>
+</html>
