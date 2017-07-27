@@ -16,7 +16,7 @@
             border-collapse:collapse;
             border:1px solid #ddd;
             text-align: center;
-            width: 80%;
+            width: 100%;
             background-color:grey;
             color:#ddd;
         }
@@ -86,9 +86,14 @@
             birth:"1988-11-27"
         }
     ];
-    var table = new dttb({
-
+    var table = new dttb("wrapper",{
+        class:"tb",
+        border:"1"
     });
+    table.add_thead();
+    table.add_tbody();
+    table.add_trth(["id","name","age","sex","mobile"]);
+
 </script>
 </body>
 </html>
