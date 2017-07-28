@@ -93,6 +93,9 @@
 
         this.data = null;
         this.add_trtd = function (arr,index) {
+            if(index > arr.length-1){
+                throw new ReferenceError("索引超出了界限");
+            }
             var rowData = arr[index];
             var tr = create("tr");
             each(rowData,function (k,v) {
