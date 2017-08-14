@@ -47,15 +47,6 @@
         }
         return el;
     }
-    function compare(p) {
-        function cmp(x,y) {
-            var tx = type(x), ty = type(y);
-            return tx==="String"?ty==="String"?x.localeCompare(y):1:ty==="String"?-1:x<y?-1:x>y?1:0;
-        }
-        return p?function (m,n) {
-            return cmp(m[p],n[p]);
-        }:cmp;
-    }
 
     window.dttb = function(wrapper,prop){
         var table = create("table",prop);
@@ -99,16 +90,18 @@
             var rowData = arr[index];
             var tr = create("tr");
             each(rowData,function (k,v) {
-                var tr = create("tr");
-                th.innerHTML = v;
-                tr.appendChild(th);
+                var td = create("td");
+                td.innerHTML = v;
+                tr.appendChild(td);
             });
             tbody.appendChild(tr);
         };
-        this.orderBy = function (p) {
-
+        this.add_trtds = function (arr) {
+            var _this = this;
+            each(arr,function (k,v) {
+                _this.add_trtd(arr,k);
+            });
         };
     };
-
 }());
 
